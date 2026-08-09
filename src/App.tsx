@@ -1,4 +1,5 @@
 import type { menuItem } from "./types/menuItem";
+import type { bigOffer } from "./types/menuItem";
 
 function App() {
   const menuItems: menuItem[] = [
@@ -10,14 +11,42 @@ function App() {
     { name: "8 pcs Chicken & 4 Fries", price: 17.95 },
     { name: "12 pcs Chicken & 4 Fries", price: 24.5 },
     { name: "Chicken Feast", price: 12.5 },
-    { name: "Family Pack", price: 16.5 },
-    { name: "Bargain Bucket", price: 20.0 },
-    { name: "Party Pack", price: 26.5 },
-    { name: "Mega Pack", price: 31.95 },
     { name: "Donor Kebab (Regular)", price: 6.0 },
     { name: "Donor Kebab (Large)", price: 7.5 },
     { name: 'Pizza 9" (Buy 1)', price: 3.95 },
     { name: "Garlic Bread", price: 1.95 },
+  ];
+
+  const bigItem: bigOffer[] = [
+    {
+      offerName: "Chicken Feast",
+      item1: "5 pcs Chicken",
+      item2: "2 Fries",
+      item3: "2 Drinks",
+      price: 12.5,
+    },
+    {
+      offerName: "Family Pack",
+      item1: "6 pcs Chicken",
+      item2: "3 Fries",
+      item3: "1 lrg Drink",
+      price: 16.5,
+    },
+    {
+      offerName: "Bargain Bucket",
+      item1: "8 pcs Chicken",
+      item2: "4 Fries",
+      item3: "1 lrg Drink",
+      item4: "Coleslaw or Beans £1 each",
+      price: 20.0,
+    },
+    {
+      offerName: "Mega Pack",
+      item1: "16 pcs Chicken",
+      item2: "5 Fries",
+      item3: "1 lrg Drink",
+      price: 31.95,
+    },
   ];
   return (
     <>
@@ -91,6 +120,7 @@ function App() {
           </div>
         </div>
       </div>
+      <div className="bigOffer" id="deal"></div>
     </>
   );
 }
