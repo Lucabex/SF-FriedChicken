@@ -305,8 +305,13 @@ nav a {
 .dealTitle h3 {
   font-family: var(--font-display);
   color: white;
-  font-size: 28px;
+  font-size: 50px;
   font-weight: 900;
+}
+.dealTitle h5 {
+  font-family: var(--font-button);
+  color: white;
+  font-size: 17px;
 }
 .dealGrid {
   display: grid;
@@ -323,6 +328,37 @@ nav a {
   flex-direction: column;
   gap: 5px;
 }
+.specialCard {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 5px;
+  background-color: var(--cream);
+  border-top: 6px solid var(--crimson);
+  max-width: 220px;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.specialCard::before {
+  content: "Most Popular";
+  position: absolute;
+  background-color: var(--gold-light);
+  top: -15px;
+  left: 53%;
+  padding: 5px;
+  font-family: var(--font-display);
+}
+
+.specialCard h3 {
+  font-family: var(--font-display);
+  color: var(--crimson-dark);
+}
+.specialCard span {
+  font-family: var(--font-display);
+}
+
 .dealCard h3 {
   font-family: var(--font-display);
   color: var(--crimson-dark);
@@ -372,6 +408,14 @@ nav a {
     justify-content: center;
     text-align: center;
   }
+  .bigOffer {
+    padding: 60px 40px;
+  }
+
+  .dealGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
 }
 
 /* ---------- MOBILE: 425px and below ---------- */
@@ -379,6 +423,11 @@ nav a {
   .topHead {
     flex-wrap: wrap;
     gap: 8px;
+  }
+  .dealCard span {
+    font-family: var(--font-display);
+    white-space: pre-line;
+    text-align: center;
   }
   .itemBox span {
     min-width: 0;
@@ -463,5 +512,16 @@ nav a {
 
   .menu {
     padding: 40px 24px;
+  }
+  .bigOffer {
+    padding: 40px 16px;
+  }
+
+  .dealGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .dealCard {
+    max-width: none;
   }
 }

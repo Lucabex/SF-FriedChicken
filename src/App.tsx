@@ -37,7 +37,7 @@ function App() {
       item1: "8 pcs Chicken",
       item2: "4 Fries",
       item3: "1 lrg Drink",
-      item4: "Coleslaw or Beans £1 each",
+      item4: "Coleslaw or Beans \n £1 each",
       price: 20.0,
     },
     {
@@ -114,7 +114,7 @@ function App() {
             {menuItems.map((item) => (
               <div className="itemBox" key={item.name}>
                 <span>{item.name}</span>
-                <span id="priceBox">£ {item.price}</span>
+                <span id="priceBox">£{item.price.toFixed(2)}</span>
               </div>
             ))}
           </div>
@@ -125,10 +125,18 @@ function App() {
           <div className="dealTitle">
             <span>Bring the family</span>
             <h3>Feasts & Bucket Deals</h3>
+            <h5>Bigger orders, better value — built for sharing.</h5>
           </div>
           <div className="dealGrid">
             {bigItem.map((deal) => (
-              <div className="dealCard" key={deal.offerName}>
+              <div
+                className={
+                  deal.offerName === "Bargain Bucket"
+                    ? "specialCard"
+                    : "dealCard"
+                }
+                key={deal.offerName}
+              >
                 <h3>{deal.offerName}</h3>
                 <span>{deal.item1}</span>
                 <span>{deal.item2}</span>
