@@ -1,0 +1,224 @@
+:root {
+  --crimson: #c41e2e;
+  --crimson-dark: #7a1220;
+  --gold: #f5b400;
+  --gold-light: #ffd866;
+  --char: #1c1210;
+  --char-soft: #2a1b17;
+  --cream: #fff6e5;
+  --paper: #fffdf8;
+  --halal: #1f6f54;
+  --shadow: 0 10px 30px rgba(28, 18, 16, 0.25);
+  --font-display: "Anton", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.topHead {
+  background-color: var(--char-soft);
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topHead span {
+  padding: 5px 20px;
+  background-color: rgb(0, 255, 170);
+  border-radius: 15px;
+  margin-left: 50px;
+}
+.topHead a {
+  text-decoration: none;
+  color: var(--gold-light);
+}
+.largeHead {
+  padding: 20px 20px;
+
+  border-bottom: 10px solid var(--crimson);
+  display: grid;
+  grid-template-columns: 1fr 5fr 15fr 5fr;
+  align-items: center;
+  gap: 20px;
+}
+.logo {
+  width: 100px;
+  height: 100px;
+  background-color: #c41e2e;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid gold;
+  font-weight: 900;
+  color: gold;
+  font-size: 33px;
+  font-family: var(--font-display);
+}
+
+.nextLogoText {
+  font-family: var(--font-display);
+  font-weight: 900;
+  color: var(--crimson-dark);
+  font-size: 10px;
+  font-display: swap;
+}
+
+.nextLogoText span {
+  color: var(--char);
+  font-family: var(--font-display);
+  font-size: 13px;
+  text-spacing-trim: 10px;
+}
+.links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  padding-right: 150px;
+}
+nav a {
+  text-decoration: none;
+  color: #1c1210;
+  font-family: var(--font-display);
+  font-size: 20px;
+}
+.buttonCall {
+  padding: 20px;
+  background-color: var(--crimson);
+  color: white;
+  border: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  border-radius: 10px;
+  font-family: "Work Sans", sans-serif;
+}
+.hero {
+  background-color: var(--char);
+  position: relative;
+  padding: 72px 0 92px;
+  overflow: hidden;
+  min-height: 500px;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -10%;
+  width: 70%;
+  height: 220%;
+  background: var(--crimson);
+  transform: rotate(12deg);
+  opacity: 0.9;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: 6%;
+  width: 14%;
+  height: 220%;
+  background: var(--gold);
+  transform: rotate(12deg);
+}
+.heroText {
+  max-width: 700px;
+  margin: 0 auto 0 10%;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+}
+.heroText h2 {
+  font-family: var(--font-display);
+  color: white;
+  font-size: clamp(2.4rem, 6vw, 3.6rem);
+  font-weight: 400;
+}
+.heroText strong {
+  color: var(--gold);
+}
+.hero p.lead {
+  margin: 18px auto 0;
+  font-size: 1.05rem;
+  max-width: 280px;
+  color: #efe6d8;
+  font-weight: 900;
+}
+.heroBtn {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.btn1 {
+  padding: 20px;
+  background-color: var(--gold);
+  color: #1c1210;
+  font-family: var(--font-display);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.btn2 {
+  border-radius: 10px;
+  padding: 5px;
+  border: none;
+  background-color: white;
+  font-family: var(--font-display);
+  font-size: 20px;
+  margin-top: 10px;
+}
+#red {
+  color: var(--halal);
+}
+#green {
+  color: var(--crimson);
+}
+.oblText {
+  display: block;
+  color: var(--gold);
+  transform: rotate(-3deg);
+  font-family: "Caveat", cursive;
+  font-size: 28px;
+}
+.circle {
+  border: 15px solid var(--gold);
+  display: block;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  color: #fffdf8;
+  padding: 25px;
+  border-radius: 500px;
+  width: 220px;
+  height: 220px;
+  align-content: center;
+}
+.circle span {
+  display: block;
+  margin: 0 auto 0 15%;
+  font-family: var(--font-display);
+  color: var(--gold-light);
+  transform: rotate(-10deg);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.infobox {
+  background-color: var(--gold);
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px;
+  font-family: var(--font-display);
+}
+.infobox h3::before {
+  content: " ● ";
+  color: var(--crimson);
+  margin-right: 8px;
+}
