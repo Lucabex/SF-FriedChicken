@@ -215,7 +215,7 @@ nav a {
 .infobox {
   background-color: var(--gold);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 20px 20px;
   font-family: var(--font-display);
 }
@@ -229,7 +229,7 @@ nav a {
   background-color: var(--cream);
 }
 
-.menubox {
+.menuBox {
   background-color: var(--crimson);
   border-radius: 15px;
 }
@@ -280,6 +280,64 @@ nav a {
   justify-content: center;
   align-items: center;
   transform: rotate(-3deg);
+}
+.bigOffer {
+  padding: 100px 150px;
+  background-color: var(--char);
+}
+.bigOfferBox {
+}
+
+.dealTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  flex-direction: column;
+}
+.dealTitle span {
+  display: block;
+  transform: rotate(-3deg);
+  font-family: var(--font-rotate);
+  color: var(--gold);
+  font-size: 28px;
+}
+.dealTitle h3 {
+  font-family: var(--font-display);
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
+}
+.dealGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.dealCard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 25px 5px;
+  background-color: var(--cream);
+  border-top: 4px solid var(--gold);
+  max-width: 220px;
+  flex-direction: column;
+  gap: 5px;
+}
+.dealCard h3 {
+  font-family: var(--font-display);
+  color: var(--crimson-dark);
+}
+.dealCard span {
+  font-family: var(--font-display);
+}
+#price {
+  color: var(--gold);
+  background-color: var(--char-soft);
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
 }
 /* ---------- TABLET: 768px and below ---------- */
 @media (max-width: 768px) {

@@ -65,8 +65,8 @@ function App() {
             <span>Dallow road - Luton</span>
           </div>
           <nav className="links">
-            <a href="menu">Menu</a>
-            <a href="">Deals</a>
+            <a href="#menu">Menu</a>
+            <a href="#deal">Deals</a>
             <a href="">Find Us</a>
           </nav>
           <button className="buttonCall">Call to order</button>
@@ -105,7 +105,7 @@ function App() {
         <h3>Dine In · Collection · Delivery</h3>
       </div>
       <div className="menu" id="menu">
-        <div className="menubox">
+        <div className="menuBox">
           <div className="menuTitle">
             <span>Straight off the board</span>
             <h3>Chicken & Fries</h3>
@@ -120,7 +120,27 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="bigOffer" id="deal"></div>
+      <div className="bigOffer" id="deal">
+        <div className="bigOfferBox">
+          <div className="dealTitle">
+            <span>Bring the family</span>
+            <h3>Feasts & Bucket Deals</h3>
+          </div>
+          <div className="dealGrid">
+            {bigItem.map((deal) => (
+              <div className="dealCard" key={deal.offerName}>
+                <h3>{deal.offerName}</h3>
+                <span>{deal.item1}</span>
+                <span>{deal.item2}</span>
+                <span>{deal.item3}</span>
+                <span>{deal.item4}</span>
+                <span>{deal.item5}</span>
+                <span id="price">£{deal.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
     </>
   );
 }
