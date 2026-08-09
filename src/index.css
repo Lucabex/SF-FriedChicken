@@ -10,6 +10,8 @@
   --halal: #1f6f54;
   --shadow: 0 10px 30px rgba(28, 18, 16, 0.25);
   --font-display: "Anton", sans-serif;
+  --font-button: "Work Sans", sans-serif;
+  --font-rotate: "Caveat", cursive;
 }
 
 * {
@@ -221,4 +223,32 @@ nav a {
   content: " ● ";
   color: var(--crimson);
   margin-right: 8px;
+}
+.menu {
+  padding: 100px 150px;
+}
+
+.menubox {
+  background-color: var(--crimson);
+  border-radius: 15px;
+}
+.menuTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 20px;
+  flex-direction: column;
+}
+.menuTitle span {
+  display: block;
+  transform: rotate(-3deg);
+  font-family: var(--font-rotate);
+  color: var(--gold);
+  font-size: 28px;
+}
+.menuTitle h3 {
+  font-family: var(--font-display);
+  color: white;
+  font-size: 28px;
+  font-weight: 900;
 }

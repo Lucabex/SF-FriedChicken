@@ -15,7 +15,7 @@ function App() {
             <span>Dallow road - Luton</span>
           </div>
           <nav className="links">
-            <a href="">Menu</a>
+            <a href="menu">Menu</a>
             <a href="">Deals</a>
             <a href="">Find Us</a>
           </nav>
@@ -53,6 +53,14 @@ function App() {
         <h3>160 Dallow Road, Luton LU1 1NF</h3>
         <h3>Chicken · Pizza · Kebabs · Burgers</h3>
         <h3>Dine In · Collection · Delivery</h3>
+      </div>
+      <div className="menu" id="menu">
+        <div className="menubox">
+          <div className="menuTitle">
+            <span>Straight off the board</span>
+            <h3>Chicken & Fries</h3>
+          </div>
+        </div>
       </div>
     </>
   );
